@@ -1,0 +1,15 @@
+import { defineConfig } from 'sanity';
+import { structureTool } from 'sanity/structure';
+import { apiVersion, dataset, projectId } from './src/sanity/env';
+import { schema } from './src/sanity/schemaTypes';
+
+export default defineConfig({
+  projectId,
+  dataset,
+  schema,
+  plugins: [
+    structureTool({
+      title: 'Folio Booksellers CMS',
+    }),
+  ],
+});
